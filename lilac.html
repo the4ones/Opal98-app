@@ -14,7 +14,7 @@
       margin: 0;
       padding: 0;
       position: relative;
-      background-color: #333;
+      background-color: #d8b9ff;
       color: #fff;
       transition: background-color 0.3s;
     }
@@ -67,7 +67,7 @@
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
-  background-color: #555;
+  background-color: #d8b9ff;
   color: #fff;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add border-color transition */
   position: relative;
@@ -84,7 +84,7 @@
   margin: 4px 0;
   width: 100%;
   text-align: left;
-  background-color: #7f8c8d; /* Set the desired grey color */
+  background-color: #d8b9ff; /* Set the desired grey color */
 }
 #settings-icon {
   position: fixed;
@@ -121,7 +121,7 @@
   transition: background-color 0.3s, color 0.3s;
   position: relative;
   z-index: 1002;
-  border: 2px solid #C8A2C8;
+  border: 2px solid #777;
 
 }
 
@@ -184,9 +184,9 @@
       padding: 10px;
       width: 80%;
       max-width: 400px;
-      border: 5px solid #555;
+      border: 5px solid #e1c4ff;
       border-radius: 5px;
-      background-color: #444;
+      background-color: #d2afff;
       color: #fff;
     }
 
@@ -203,7 +203,7 @@
       text-align: center;
       text-decoration: none;
       border-radius: 10px;
-      background-color: #555;
+      background-color: #e6d7ff;
       color: #ffffff;
       transition: background-color 0.3s, color 0.3s;
       position: relative;
@@ -223,7 +223,7 @@
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
-  background-color: #555;
+  background-color: #d8b9ff;
   color: #fff;
   transition: background-color 0.3s, color 0.3s;
   position: relative;
@@ -245,7 +245,7 @@
   position: absolute;
   top: 40px;
   left: 10px;
-  background-color: #555;
+  background-color: #d8b9ff;
   border: 1px solid #777;
   color: #fff;
   padding: 10px;
@@ -267,8 +267,8 @@
 }
 
     a:hover {
-      background-color: #777;
-      color: #fff;
+      background-color: #d2afff;
+      color: #d2afff;
     }
 
     #snowfall {
@@ -312,7 +312,7 @@
       position: absolute;
       top: 40px;
       right: 10px;
-      background-color: #555;
+      background-color: #d2afff;
       border: 1px solid #777;
       color: #fff;
       padding: 10px;
@@ -340,7 +340,7 @@
     }
 
     #settings-menu select {
-      background-color: #555;
+      background-color: #d2afff;
       border: 1px solid #db6d6d;
       color: #fff;
       padding: 5px;
@@ -451,7 +451,7 @@
     <input type="text" id="game-search" placeholder="Search for a game..." oninput="searchGames()">
     <div id="settings-icon">⚙️</div>
     <div id="settings-menu">
-      <button id="cloak-tab-button">Lilac Mode</button>
+      <button id="cloak-tab-button">Normal Mode</button>
       <button id="download-button">Download Website</button>
       <button id="snowfall-toggle">Toggle Snowfall</button>
       <label for="snow-density">Snow Density:</label>
@@ -741,7 +741,7 @@ var messages = [
     "#1 website for games!",
     "Shoutout to GMS!",
     "KLLR PRO coming soon",
-    "Check out <a href='file.html'>this file</a> for more info!"
+    "Updates Weekly!"
 ];
 
 // Index to keep track of the current message
@@ -754,6 +754,7 @@ function rotateMessage() {
     
     // Fade out the message
     messageElement.style.opacity = 0;
+    
     // Wait for the fade-out transition to complete
     setTimeout(function() {
         // Display the new message
@@ -797,7 +798,7 @@ setInterval(rotateMessage, 3000);
   const cloakTabButton = document.getElementById("cloak-tab-button");
 
   cloakTabButton.addEventListener("click", function () {
-    window.open('./lilacindex.html', '_blank');
+    window.open('./index.html', '_blank');
   });
   const downloadbutton = document.getElementById("download-button");
 
@@ -809,6 +810,7 @@ downloadbutton.addEventListener("click", function () {
     const selectedTheme = themeModeDropdown.value;
     document.body.className = selectedTheme;
   });
+  
 
   function createSnowflake() {
     const snowflake = document.createElement("div");
