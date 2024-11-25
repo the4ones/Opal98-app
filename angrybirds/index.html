@@ -37,6 +37,15 @@
     </script>
   </head>
   <body>
+     <!-- Home Button -->
+  <button id="home-button" class="nav-button" onclick="goHome()"><i class="fas fa-home"></i></button>
+
+  <!-- Fullscreen Button -->
+  <button id="fullscreen-button" class="nav-button" onclick="toggleFullScreen()"><i class="fas fa-expand"></i></button>
+
+  <!-- Embedding the Game File -->
+  <iframe src="./game.html" title="Your Game"></iframe>
+    
     <script type="text/javascript">
       function getFlashVersion() {
         try {
@@ -162,6 +171,23 @@
         }, 500);
       }
     </script>
+    <script>
+    function goHome() {
+      // Redirect to the home page
+      window.location.href = '../games.html'; // Adjust the path to the home file
+    }
+
+    function toggleFullScreen() {
+      var iframe = document.querySelector('iframe');
+      if (!document.fullscreenElement) {
+        iframe.requestFullscreen().catch(err => {
+          alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+  </script>
     <script src="/html/settings/js/index.js"></script>
   </body>
 </html>
